@@ -1,9 +1,7 @@
 {
-    "semi": false,
-    "trailingComma": "none",
-    "singleQuote": true,
-    "printWidth": 80,
-    "plugins": [
-        "prettier-plugin-organize-imports"
-    ]
+  "semi": false,
+  "trailingComma": "none",
+  "singleQuote": true,
+  "printWidth": 80,
+  "plugins": ["prettier-plugin-organize-imports"]
 }
