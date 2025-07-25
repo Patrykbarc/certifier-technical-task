@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { Navigation } from './components/views/Navigation'
+import { Navigation } from './components/views/Navigation/Navigation'
 import './globals.css'
 
 const ttFirsNeue = localFont({

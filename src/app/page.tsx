@@ -1,6 +1,6 @@
-export default function Home() {
+export default async function Home() {
   return (
-    <div className="font-sans grid items-center justify-items-center min-h-dvh">
+    <div className="grid items-center justify-items-center">
       <p>Hello Certifier</p>
     </div>
   )
