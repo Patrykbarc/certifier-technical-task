@@ -9,7 +9,7 @@ type GetStartedButtonProps = {
 export function GetStartedButton({ size = 'sm' }: GetStartedButtonProps) {
   return (
     <Link
-      href="/"
+      href="#get-started"
       className={cn(buttonVariants.variant.default, buttonVariants.size[size])}
     >
       Get started

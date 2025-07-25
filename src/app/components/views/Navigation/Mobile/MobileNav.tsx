@@ -8,7 +8,7 @@ export function MobileNav() {
   useLockBodyScroll(isMobileMenuOpen)
 
   return (
-    <header className="py-5 px-6 md:px-12 mx-auto flex justify-between items-center 2xl:hidden">
+    <header className="py-5 px-5 mx-auto flex justify-between items-center 2xl:hidden">
       <MenuClosed setIsMobileMenuOpen={setIsMobileMenuOpen} />
       <MenuOpen
         isMobileMenuOpen={isMobileMenuOpen}

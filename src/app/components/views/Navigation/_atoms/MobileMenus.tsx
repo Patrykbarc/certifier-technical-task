@@ -53,7 +53,7 @@ function MenuOpen({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
         isMobileMenuOpen ? 'block' : 'hidden'
       )}
     >
-      <div className="flex justify-between items-center  px-6 md:px-12 py-5 border-b border-gray-200">
+      <div className="flex justify-between items-center px-5 py-5 border-b border-gray-200">
         <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
           <BrandLogo width={145} height={35} />
         </Link>
@@ -68,8 +68,8 @@ function MenuOpen({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
         </button>
       </div>
 
-      <nav className="flex-1 px-6">
-        <ul className="mt-8 flex flex-col space-y-6 px-6">
+      <nav className="flex-1 px-5">
+        <ul className="mt-8 flex flex-col space-y-6">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.label}

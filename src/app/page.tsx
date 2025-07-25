@@ -1,7 +1,9 @@
+import { Hero } from './components/views/Hero/Hero'
+
 export default async function Home() {
   return (
-    <div className="grid items-center justify-items-center">
-      <p>Hello Certifier</p>
+    <div className="w-full mx-auto">
+      <Hero />
     </div>
   )
 }
