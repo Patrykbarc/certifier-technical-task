@@ -1,15 +1,23 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
+import { Navigation } from './components/views/Navigation'
 import './globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
+const ttFirsNeue = localFont({
+  src: [
+    {
+      path: '../../public/fonts/TTFirsNeue-Regular.ttf',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../../public/fonts/TTFirsNeue-Medium.ttf',
+      weight: '500',
+      style: 'normal'
+    }
+  ],
+  variable: '--font-tt-firs-neue',
+  display: 'swap'
 })
 
 export const metadata: Metadata = {
@@ -47,8 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ttFirsNeue.variable} font-sans antialiased w-dvw min-h-dvh`}
       >
+        <Navigation />
         {children}
       </body>
     </html>
