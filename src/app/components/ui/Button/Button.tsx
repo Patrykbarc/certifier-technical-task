@@ -5,7 +5,7 @@ type ButtonVariant = 'default' | 'link'
 type ButtonSize = 'default' | 'sm' | 'lg' | 'icon'
 
 const baseClasses =
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:translate-y-[-2px]'
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:translate-y-[-2px] active:translate-y-0'
 
 const buttonVariants = {
   variant: {
@@ -16,7 +16,7 @@ const buttonVariants = {
     link: cn(baseClasses, 'text-cerfitier-blue focus:ring-cerfitier-blue')
   },
   size: {
-    default: 'h-10 px-4 py-2.5 h-[44px]',
+    default: 'px-4 py-2.5 h-[44px]',
     sm: 'h-9 px-3 text-sm',
     lg: 'h-12 px-5 py-2.5 text-xl',
     icon: 'p-0 size-10'
