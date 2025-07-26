@@ -5,7 +5,7 @@ import NAV_ITEMS from '../_constants/nav-items.json'
 
 export function DesktopNav() {
   return (
-    <header className="py-5 wrapper px-5 mx-auto justify-between items-center hidden 2xl:flex">
+    <div className="py-5 wrapper px-5 mx-auto justify-between items-center hidden xl:flex fixed top-0 left-0 right-0 z-50">
       <Link href="/" aria-label="Certifier home page">
         <BrandLogo width={145} height={35} />
       </Link>
@@ -16,14 +16,14 @@ export function DesktopNav() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-black hover:text-blue-500 transition-colors"
+              className="text-base text-black hover:text-blue-500 transition-colors"
             >
               {item.label}
             </Link>
           ))}
         </nav>
-        <GetStartedButton />
+        <GetStartedButton size="default" />
       </div>
-    </header>
+    </div>
   )
 }
