@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 
 export function useLockBodyScroll(isLocked: boolean) {
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
     if (isLocked) {
       const originalOverflow = document.body.style.overflow
       document.body.style.overflow = 'hidden'
