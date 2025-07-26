@@ -3,11 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --cerfitier-blue: #1664d8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cerfitier-blue: var(--cerfitier-blue);
   --font-sans: var(--font-tt-firs-neue), ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -25,5 +27,5 @@ body {
 
 .wrapper {
   @apply mx-auto;
-  max-width: 1170px;
+  max-width: 1200px;
 }

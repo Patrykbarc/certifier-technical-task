@@ -11,18 +11,15 @@ const buttonVariants = {
   variant: {
     default: cn(
       baseClasses,
-      'bg-blue-500 text-white hover:bg-blue-700 focus:ring-blue-500'
+      'bg-cerfitier-blue text-white hover:bg-cerfitier-blue/90 focus:ring-cerfitier-blue'
     ),
-    link: cn(
-      baseClasses,
-      'text-blue-500 underline-offset-4 hover:underline focus:ring-blue-500'
-    )
+    link: cn(baseClasses, 'text-cerfitier-blue focus:ring-cerfitier-blue')
   },
   size: {
-    default: 'h-10 px-4 py-2',
+    default: 'h-10 px-4 py-2.5 h-[44px]',
     sm: 'h-9 px-3 text-sm',
-    lg: 'h-11 px-8 text-lg',
-    icon: 'h-10 w-10 p-0'
+    lg: 'h-12 px-5 py-2.5 text-xl',
+    icon: 'p-0 size-10'
   }
 }
 

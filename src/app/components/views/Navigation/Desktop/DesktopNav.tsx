@@ -5,12 +5,12 @@ import NAV_ITEMS from '../_constants/nav-items.json'
 
 export function DesktopNav() {
   return (
-    <div className="py-5 wrapper px-5 mx-auto justify-between items-center hidden xl:flex fixed top-0 left-0 right-0 z-50">
+    <div className="py-5 wrapper px-9 mx-auto justify-between items-center hidden xl:flex fixed top-0 left-0 right-0 z-50">
       <Link href="/" aria-label="Certifier home page">
         <BrandLogo width={145} height={35} />
       </Link>
 
-      <div className="flex items-center gap-9">
+      <div className="flex items-center gap-8">
         <nav className="flex items-center space-x-9">
           {NAV_ITEMS.map((item) => (
             <Link
