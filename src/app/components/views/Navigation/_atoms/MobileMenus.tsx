@@ -1,18 +1,16 @@
 import { cn } from '@/app/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import { GetStartedButton } from '../_atoms/GetStartedButton'
-import NAV_ITEMS from '../_constants/nav-items.json'
+import { NAV_ITEMS } from '../_constants/nav-items'
 import { BrandLogo } from './BrandLogo'
+import { LinkButton } from './LinkButton'
 
 type MenuProps = {
   isMobileMenuOpen: boolean
   setIsMobileMenuOpen: (isOpen: boolean) => void
 }
 
-function MenuClosed({
-  setIsMobileMenuOpen
-}: Pick<MenuProps, 'setIsMobileMenuOpen'>) {
+function MenuClosed({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
   return (
     <>
       <Link
@@ -24,11 +22,12 @@ function MenuClosed({
       </Link>
 
       <div className="flex items-center gap-4">
-        <GetStartedButton />
+        <LinkButton href="#get-started" label="Get started" />
 
         <button
           type="button"
           aria-label="Open navigation menu"
+          aria-expanded={isMobileMenuOpen}
           className="z-50 aspect-square size-10 cursor-pointer"
           onClick={() => setIsMobileMenuOpen(true)}
         >
@@ -53,7 +52,7 @@ function MenuOpen({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
         isMobileMenuOpen ? 'block' : 'hidden'
       )}
     >
-      <div className="flex justify-between items-center px-5 py-5 border-b border-gray-200">
+      <div className="flex wrapper justify-between items-center px-5 py-5 border-b border-gray-200">
         <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
           <BrandLogo width={145} height={35} />
         </Link>
@@ -68,7 +67,7 @@ function MenuOpen({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
         </button>
       </div>
 
-      <nav className="flex-1 px-5">
+      <nav className="flex-1 px-5" aria-label="Main navigation">
         <ul className="mt-8 flex flex-col space-y-6">
           {NAV_ITEMS.map((item) => (
             <Link
@@ -80,7 +79,7 @@ function MenuOpen({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
               <li className="border-b pb-6 border-gray-200">{item.label}</li>
             </Link>
           ))}
-          <GetStartedButton size="lg" />
+          <LinkButton href="#get-started" label="Get started" size="lg" />
         </ul>
       </nav>
     </div>

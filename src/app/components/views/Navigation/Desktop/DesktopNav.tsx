@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { BrandLogo } from '../_atoms/BrandLogo'
-import { GetStartedButton } from '../_atoms/GetStartedButton'
-import NAV_ITEMS from '../_constants/nav-items.json'
+import { LinkButton } from '../_atoms/LinkButton'
+import { NAV_ITEMS } from '../_constants/nav-items'
 
 export function DesktopNav() {
   return (
@@ -11,7 +11,10 @@ export function DesktopNav() {
       </Link>
 
       <div className="flex items-center gap-8">
-        <nav className="flex items-center space-x-9">
+        <nav
+          className="flex items-center space-x-9"
+          aria-label="Main navigation"
+        >
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.label}
@@ -22,7 +25,7 @@ export function DesktopNav() {
             </Link>
           ))}
         </nav>
-        <GetStartedButton size="default" />
+        <LinkButton href="#get-started" label="Get started" size="default" />
       </div>
     </div>
   )

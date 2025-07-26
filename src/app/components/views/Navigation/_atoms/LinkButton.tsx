@@ -2,11 +2,13 @@ import { ButtonSize, buttonVariants } from '@/app/components/ui/Button/Button'
 import { cn } from '@/app/lib/utils'
 import Link from 'next/link'
 
-type GetStartedButtonProps = {
+type LinkButtonProps = {
+  href: string
+  label: string
   size?: ButtonSize
 }
 
-export function GetStartedButton({ size = 'sm' }: GetStartedButtonProps) {
+export function LinkButton({ size = 'sm' }: LinkButtonProps) {
   return (
     <Link
       href="#get-started"
