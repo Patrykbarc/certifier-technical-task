@@ -1,8 +1,8 @@
 import { Hero } from './components/views/Hero/Hero'
 
-export default async function Home() {
+export default function Home() {
   return (
-    <div className="w-full mx-auto">
+    <div>
       <Hero />
     </div>
   )
