@@ -39,9 +39,9 @@ const HERO_LOGOS: LogoItem[] = [
 export function HeroLogos() {
   return (
     <div className="flex items-center mt-12 md:mt-1 justify-between w-full wrapper px-4 flex-col 2xl:flex-row space-y-10 2xl:space-y-0">
-      <h1 className="text-center mt-1.5 text-xl xl:text-base 2xl:text-left 2xl:max-w-60 mb-4 lg:mb-auto">
+      <h2 className="text-center mt-1.5 text-xl xl:text-base 2xl:text-left 2xl:max-w-60 mb-4 lg:mb-auto">
         500+ training providers grow their businesses with Certifier
-      </h1>
+      </h2>
       <Separator />
       <Logos />
     </div>
@@ -54,7 +54,7 @@ function Separator() {
 
 function Logos() {
   return (
-    <div className="flex flex-wrap items-center justify-evenly gap-4 pt-1 w-full 2xl:justify-between">
+    <div className="flex flex-wrap items-center justify-evenly gap-4 pt-4 2xl:pt-1 w-full 2xl:justify-between">
       {HERO_LOGOS.map((logo) => (
         <Image
           key={logo.name}
