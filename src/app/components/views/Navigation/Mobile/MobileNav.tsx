@@ -7,7 +7,7 @@ import { useScrollHeight } from '../_hook/useScrollHeight'
 export function MobileNav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const scrollHeight = useScrollHeight()
-  useLockBodyScroll(isMobileMenuOpen)
+  useLockBodyScroll(isMobileMenuOpen, () => setIsMobileMenuOpen(false))
 
   return (
     <div

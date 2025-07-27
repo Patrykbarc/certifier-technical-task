@@ -1,10 +1,20 @@
 import { useEffect, useState } from 'react'
 
-export function useMediaQuery(query: string): boolean | null {
+const breakpoints = {
+  sm: '40rem',
+  md: '48rem',
+  lg: '64rem',
+  xl: '80rem',
+  '2xl': '96rem'
+}
+
+export function useMediaQuery(
+  breakpoint: keyof typeof breakpoints
+): boolean | null {
   const [matches, setMatches] = useState<null | boolean>(null)
 
   useEffect(() => {
-    const media = window.matchMedia(query)
+    const media = window.matchMedia(`(max-width: ${breakpoints[breakpoint]})`)
 
     setMatches(media.matches)
 
@@ -13,7 +23,7 @@ export function useMediaQuery(query: string): boolean | null {
     media.addEventListener('change', listener)
 
     return () => media.removeEventListener('change', listener)
-  }, [query])
+  }, [breakpoint])
 
   return matches
 }
