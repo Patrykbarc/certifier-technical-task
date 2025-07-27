@@ -1,5 +1,5 @@
-import { HeroContent } from './atoms/HeroContent'
-import { HeroLogos } from './atoms/HeroLogos'
+import { HeroContent } from './_atoms/HeroContent'
+import { HeroLogos } from './_atoms/HeroLogos'
 
 export function Hero() {
   return (
