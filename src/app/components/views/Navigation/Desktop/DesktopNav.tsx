@@ -17,7 +17,7 @@ export function DesktopNav() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="text-base text-black hover:text-blue-500 transition-colors"
+                  className="text-base text-black motion-safe:hover:text-blue-500 transition-colors"
                 >
                   {item.label}
                 </Link>

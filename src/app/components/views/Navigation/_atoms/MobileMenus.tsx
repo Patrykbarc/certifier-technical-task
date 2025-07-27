@@ -74,7 +74,7 @@ function MenuOpen({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
           {NAV_ITEMS.map((item) => (
             <li
               key={item.label}
-              className="w-full cursor-pointer text-lg font-medium text-black hover:text-blue-500 transition-colors border-b border-gray-200"
+              className="w-full cursor-pointer text-lg font-medium text-black motion-safe:hover:text-blue-500 transition-colors border-b border-gray-200"
             >
               <Link
                 key={item.label}

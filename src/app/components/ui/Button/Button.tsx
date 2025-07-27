@@ -5,13 +5,13 @@ type ButtonVariant = 'default' | 'link'
 type ButtonSize = 'default' | 'sm' | 'lg' | 'icon'
 
 const baseClasses =
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer hover:translate-y-[-2px] active:translate-y-0'
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer motion-safe:hover:translate-y-[-2px] motion-safe:active:translate-y-0'
 
 const buttonVariants = {
   variant: {
     default: cn(
       baseClasses,
-      'bg-cerfitier-blue text-white hover:bg-cerfitier-blue/90 focus:ring-cerfitier-blue'
+      'bg-cerfitier-blue text-white motion-safe:hover:bg-cerfitier-blue/90 focus:ring-cerfitier-blue'
     ),
     link: cn(baseClasses, 'text-cerfitier-blue focus:ring-cerfitier-blue')
   },

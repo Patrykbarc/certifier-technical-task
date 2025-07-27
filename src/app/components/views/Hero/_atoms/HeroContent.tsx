@@ -40,12 +40,12 @@ function LeftSide() {
           className={cn(
             buttonVariants.variant.link,
             buttonVariants.size.lg,
-            'group hover:translate-y-0 p-0'
+            'group motion-safe:hover:translate-y-0 p-0'
           )}
         >
           Sign up free{' '}
           <Image
-            className="group-hover:translate-x-1 ms-0.5 transition-transform"
+            className="group-hover:translate-x-1 ms-0.5 motion-safe:transition-transform"
             src={CHEVRON_RIGHT}
             alt="Chevron right"
             aria-hidden
