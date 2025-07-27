@@ -11,6 +11,12 @@ export function useScrollHeight() {
     window.addEventListener('scroll', () => {
       setScrollHeight(window.scrollY)
     })
+
+    return () => {
+      window.removeEventListener('scroll', () => {
+        setScrollHeight(window.scrollY)
+      })
+    }
   }, [])
 
   return scrollHeight
