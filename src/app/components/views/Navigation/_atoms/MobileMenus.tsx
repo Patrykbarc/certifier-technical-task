@@ -28,6 +28,7 @@ function MenuClosed({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
           type="button"
           aria-label="Open navigation menu"
           aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
           className="z-50 aspect-square size-10 cursor-pointer"
           onClick={() => setIsMobileMenuOpen(true)}
         >
@@ -47,8 +48,9 @@ function MenuClosed({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
 function MenuOpen({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
   return (
     <div
+      id="mobile-menu"
       className={cn(
-        'fixed inset-0 z-50 flex flex-col bg-white transition-transform duration-300 ease-in-out',
+        'fixed inset-0 z-50 flex flex-col bg-white motion-safe:transition-transform duration-300 ease-in-out',
         isMobileMenuOpen ? 'block' : 'hidden'
       )}
     >

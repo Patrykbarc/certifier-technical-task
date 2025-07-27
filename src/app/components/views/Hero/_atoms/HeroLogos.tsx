@@ -49,7 +49,12 @@ export function HeroLogos() {
 }
 
 function Separator() {
-  return <div className="h-[40px] w-[1px] bg-[#ccc] hidden 2xl:block mx-8" />
+  return (
+    <div
+      aria-hidden
+      className="h-[40px] w-[1px] bg-[#ccc] hidden 2xl:block mx-8"
+    />
+  )
 }
 
 function Logos() {

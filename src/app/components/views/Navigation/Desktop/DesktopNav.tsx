@@ -11,19 +11,19 @@ export function DesktopNav() {
       </Link>
 
       <div className="flex items-center gap-8">
-        <nav
-          className="flex items-center space-x-9"
-          aria-label="Main navigation"
-        >
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="text-base text-black hover:text-blue-500 transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav aria-label="Main navigation">
+          <ul className="flex items-center space-x-9">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className="text-base text-black hover:text-blue-500 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
         <LinkButton href="#get-started" label="Get started" size="default" />
       </div>

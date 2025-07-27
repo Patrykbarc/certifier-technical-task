@@ -48,6 +48,7 @@ function LeftSide() {
             className="group-hover:translate-x-1 ms-0.5 transition-transform"
             src={CHEVRON_RIGHT}
             alt="Chevron right"
+            aria-hidden
           />
         </Link>
       </div>
