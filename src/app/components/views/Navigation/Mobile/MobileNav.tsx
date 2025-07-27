@@ -12,7 +12,7 @@ export function MobileNav() {
   return (
     <div
       className={cn(
-        'py-5 transition-colors duration-500 px-5 wrapper mx-auto flex justify-between items-center xl:hidden fixed top-0 left-0 right-0 z-50',
+        'py-5 transition-colors duration-500 px-5 wrapper mx-auto flex justify-between items-center fixed top-0 left-0 right-0 z-50',
         scrollHeight > 150 && 'bg-white shadow-xs'
       )}
     >

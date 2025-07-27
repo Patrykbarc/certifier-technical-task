@@ -5,7 +5,7 @@ import { NAV_ITEMS } from '../_constants/nav-items'
 
 export function DesktopNav() {
   return (
-    <div className="py-5 wrapper px-9 mx-auto justify-between items-center hidden xl:flex fixed top-0 left-0 right-0 z-50">
+    <div className="py-5 wrapper px-9 mx-auto justify-between items-center flex fixed top-0 left-0 right-0 z-50">
       <Link href="/" aria-label="Certifier home page">
         <BrandLogo width={145} height={35} />
       </Link>
