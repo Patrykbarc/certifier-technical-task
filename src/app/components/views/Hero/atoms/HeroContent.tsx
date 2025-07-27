@@ -56,28 +56,27 @@ function LeftSide() {
 }
 
 function RightSide() {
-  const sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-
   return (
     <div className="max-w-4xl md:mt-0 mt-10 size-full relative h-[420px] xl:h-[500px] grid place-items-center">
       <div className="absolute group xl:left-22 xl:top-7">
         <Image
           src={HERO_IMAGE}
           alt="A man with glasses sits at a table, focused on his laptop while working or browsing."
+          width={281}
+          height={396}
           priority
-          sizes={sizes}
         />
         <Image
           src={CERT}
           alt="Image of the certificate with the title “TRAINING CERTIFICATE” and the expiry date."
+          width={246}
+          height={324}
           className={cn(
-            'shadow-lg absolute',
+            'shadow-lg absolute size-auto',
             '-right-12 lg:-right-14 xl:-right-[154px]',
             '-bottom-24 xl:-bottom-13',
             'scale-75 xl:scale-100'
           )}
-          priority
-          sizes={sizes}
         />
       </div>
     </div>
