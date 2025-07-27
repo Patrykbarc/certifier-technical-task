@@ -38,8 +38,8 @@ const HERO_LOGOS: LogoItem[] = [
 
 export function HeroLogos() {
   return (
-    <div className="flex items-center mt-1 justify-between w-full wrapper px-4 flex-col 2xl:flex-row space-y-10 2xl:space-y-0">
-      <h1 className="text-center 2xl:text-left 2xl:max-w-60">
+    <div className="flex items-center mt-12 md:mt-1 justify-between w-full wrapper px-4 flex-col 2xl:flex-row space-y-10 2xl:space-y-0">
+      <h1 className="text-center text-xl xl:text-base 2xl:text-left 2xl:max-w-60 mb-4 lg:mb-auto">
         500+ training providers grow their businesses with Certifier
       </h1>
       <Separator />

@@ -33,7 +33,7 @@ function LeftSide() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row gap-6 items-center mt-10">
+      <div className="flex flex-col sm:flex-row gap-3 md:gap-6 items-center justify-center md:justify-start mt-10">
         <LinkButton href="#book-a-demo" label="Book a demo" size="lg" />
         <Link
           href="#signup"
@@ -59,8 +59,8 @@ function RightSide() {
   const sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 
   return (
-    <div className="max-w-4xl size-full relative h-[420px] xl:h-[500px] grid place-items-center">
-      <div className="absolute group xl:left-22 xl:top-7 scale-75 lg:scale-100">
+    <div className="max-w-4xl md:mt-0 mt-10 size-full relative h-[420px] xl:h-[500px] grid place-items-center">
+      <div className="absolute group xl:left-22 xl:top-7">
         <Image
           src={HERO_IMAGE}
           alt="A man with glasses sits at a table, focused on his laptop while working or browsing."
@@ -70,7 +70,12 @@ function RightSide() {
         <Image
           src={CERT}
           alt="Image of the certificate with the title “TRAINING CERTIFICATE” and the expiry date."
-          className="absolute -bottom-24 -right-18 xl:-right-[154px] xl:-bottom-13 shadow-lg scale-75 xl:scale-100"
+          className={cn(
+            'shadow-lg absolute',
+            '-right-12 lg:-right-14 xl:-right-[154px]',
+            '-bottom-24 xl:-bottom-13',
+            'scale-75 xl:scale-100'
+          )}
           priority
           sizes={sizes}
         />
