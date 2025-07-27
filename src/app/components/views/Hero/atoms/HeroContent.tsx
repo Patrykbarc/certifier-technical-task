@@ -45,7 +45,7 @@ function LeftSide() {
         >
           Sign up free{' '}
           <Image
-            className="group-hover:translate-x-1 transition-transform"
+            className="group-hover:translate-x-1 ms-0.5 transition-transform"
             src={CHEVRON_RIGHT}
             alt="Chevron right"
           />
