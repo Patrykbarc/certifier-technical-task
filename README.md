@@ -56,7 +56,7 @@ pnpm dev
 | ------------------- | ------------------------------------ |
 | `pnpm build`        | Create an optimized production build |
 | `pnpm start`        | Run the production build locally     |
-| `pnpm lint`         | Lint sources with ESLint & Prettier  |
+| `pnpm lint`         | Lint sources with ESLint             |
 | `pnpm prettier:fix` | Format code with Prettier            |
 
 ---
