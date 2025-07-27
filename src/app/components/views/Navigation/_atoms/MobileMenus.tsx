@@ -68,18 +68,30 @@ function MenuOpen({ isMobileMenuOpen, setIsMobileMenuOpen }: MenuProps) {
       </div>
 
       <nav className="flex-1 px-5" aria-label="Main navigation">
-        <ul className="mt-8 flex flex-col space-y-6">
+        <ul className="flex flex-col">
           {NAV_ITEMS.map((item) => (
-            <Link
+            <li
               key={item.label}
-              href={item.href}
-              className="text-lg font-medium text-black hover:text-blue-500 transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full cursor-pointer py-6 text-lg font-medium text-black hover:text-blue-500 transition-colors border-b border-gray-200"
             >
-              <li className="border-b pb-6 border-gray-200">{item.label}</li>
-            </Link>
+              <Link
+                key={item.label}
+                href={item.href}
+                className="pb-6"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            </li>
           ))}
-          <LinkButton href="#get-started" label="Get started" size="lg" />
+          <li className="mt-8">
+            <LinkButton
+              href="#get-started"
+              label="Get started"
+              size="lg"
+              className="w-full"
+            />
+          </li>
         </ul>
       </nav>
     </div>
