@@ -85,3 +85,13 @@ pnpm dev
 - **Positioning elements in the Hero section:** The hero section features images positioned with absolute and negative values to precisely match the Figma design. This approach, while visually accurate, is rigid and can be difficult to maintain. A more robust solution would involve using a single, combined graphic or a more flexible layout system like CSS Grid with translate transforms to avoid potential layout shifts when content or screen sizes change.
 
 - **Differences in layout for different breakpoints:** Certain elements, like the separator in the logos section, are shown or hidden at specific breakpoints (e.g., visible only on `2xl` screens). This was done to adhere to the design but can lead to layout inconsistencies. A better long-term approach would be to design a single, fluid layout that gracefully adapts across all screen sizes without hiding/showing components.
+
+---
+
+## 🌐 Internationalization (i18n)
+
+I noticed that the Figma file contains separate language layers. Although the current implementation focuses on a single language to keep the scope manageable, all strings can be externalised to JSON files (e.g. `locales/en.json`, `locales/pl.json`). A future upgrade path is as follows:
+
+1. Extract static content to translation JSONs.
+2. Integrate a lightweight library such as **next-intl** or **next-i18next** for automatic language detection and routing.
+3. Add a language switcher in the navigation and honour the `Accept-Language` header.
