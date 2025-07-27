@@ -70,7 +70,7 @@ function RightSide() {
         <Image
           src={CERT}
           alt="Image of the certificate with the title “TRAINING CERTIFICATE” and the expiry date."
-          className="absolute -bottom-24 -right-18 xl:-right-[154px] shadow-lg scale-75 xl:scale-100"
+          className="absolute -bottom-24 -right-18 xl:-right-[154px] xl:-bottom-13 shadow-lg scale-75 xl:scale-100"
           priority
           sizes={sizes}
         />
