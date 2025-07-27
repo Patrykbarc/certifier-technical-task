@@ -8,13 +8,13 @@ type LinkButtonProps = {
   size?: ButtonSize
 }
 
-export function LinkButton({ size = 'sm' }: LinkButtonProps) {
+export function LinkButton({ href, label, size = 'sm' }: LinkButtonProps) {
   return (
     <Link
-      href="#get-started"
+      href={href}
       className={cn(buttonVariants.variant.default, buttonVariants.size[size])}
     >
-      Get started
+      {label}
     </Link>
   )
 }
